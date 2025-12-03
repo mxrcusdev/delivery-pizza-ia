@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 30 25% 97%;
+    --foreground: 20 20% 15%;
+
+    --card: 30 30% 98%;
+    --card-foreground: 20 20% 15%;
+
+    --popover: 30 30% 98%;
+    --popover-foreground: 20 20% 15%;
+
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 30% 92%;
+    --secondary-foreground: 20 20% 20%;
+
+    --muted: 30 20% 90%;
+    --muted-foreground: 20 10% 45%;
+
+    --accent: 145 45% 35%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 24 95% 53%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --tomato: 8 85% 55%;
+    --cheese: 45 100% 70%;
+    --basil: 145 45% 35%;
+    --crust: 35 40% 75%;
+    --warm-white: 40 40% 98%;
+    --charcoal: 20 15% 20%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(24 95% 53% / 0.9), hsl(8 85% 55% / 0.85));
+    --gradient-warm: linear-gradient(180deg, hsl(30 25% 97%), hsl(40 40% 98%));
+    --gradient-card: linear-gradient(145deg, hsl(30 30% 98%), hsl(30 25% 95%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(24 95% 53% / 0.1);
+    --shadow-card: 0 8px 30px hsl(20 20% 15% / 0.08);
+    --shadow-elevated: 0 20px 40px hsl(20 20% 15% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 20 15% 10%;
+    --foreground: 30 20% 95%;
+
+    --card: 20 15% 13%;
+    --card-foreground: 30 20% 95%;
+
+    --popover: 20 15% 13%;
+    --popover-foreground: 30 20% 95%;
+
+    --primary: 24 95% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 20 15% 18%;
+    --secondary-foreground: 30 20% 90%;
+
+    --muted: 20 15% 20%;
+    --muted-foreground: 30 15% 60%;
+
+    --accent: 145 45% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 15% 20%;
+    --input: 20 15% 20%;
+    --ring: 24 95% 55%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+
+@layer components {
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
