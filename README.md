@@ -11,9 +11,15 @@ npm i
 # Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
-# This project is built with:
+# Este projeto foi construído com:
 - Vite
 - TypeScript
 - React
 - shadcn-ui
 - Tailwind CSS
+
+## Erros a serem corrigidos
+
+```echo
+Não possui verificação de número de celular e endereço, não há verificação/confirmação de pagamento, não possui gateway de pagamento integrado
+```
