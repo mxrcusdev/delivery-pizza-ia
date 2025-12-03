@@ -1,1 +1,10 @@
 node_modules
+components.json
+eslint.config.js
+package.json
+postcss.config.js
+tailwind.config.ts
+tsconfig.app.json
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
